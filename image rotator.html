@@ -1,0 +1,128 @@
+<DOCTYPE HTML>
+<html>
+<head>
+<script 
+
+src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.m
+
+in.js"></script>
+<script>
+$(document).ready(function(){
+$("#b1").click(function(){
+ var x=$("#div1").width();
+ x+=10;
+$("#div1").width(x);
+var y=$("#div1").height();
+y=y+10;
+$("#div1").height(y);
+});
+$("#b2").click(function(){
+var a=$("#div1").width();
+a-=10;
+$("#div1").width(a);
+var b=$("#div1").height();
+b-=10;
+$("#div1").height(b);
+});
+$("#b3").click(function(){
+ $("#div1").animate({
+height:'400px',
+width:'700px'
+});
+});
+qwe =0;
+$("#l").click(function(){
+qwe-=90;
+$("#div1").css({ 'transform': 'rotate('+qwe+'deg)'})
+});
+$("#r").click(function(){
+qwe+=90;
+$("#div1").css({'transform': 'rotate('+qwe+'deg)'})
+});
+});
+
+var imgArray = new Array();
+
+imgArray[0] = new Image();
+imgArray[0].src = '1.jpg';
+
+imgArray[1] = new Image();
+imgArray[1].src = '2.jpg';
+
+imgArray[2] = new Image();
+imgArray[2].src = '3.jpg';
+
+imgArray[3] = new Image();
+imgArray[3].src = '4.jpg';
+
+imgArray[4] = new Image();
+imgArray[4].src = '5.jpg';
+
+imgArray[5] = new Image();
+imgArray[5].src = '6.jpg';
+
+imgArray[6] = new Image();
+imgArray[6].src = '7.jpg';
+
+imgArray[7] = new Image();
+imgArray[7].src = '8.jpg';
+
+function functionn()
+{
+    var img = document.getElementById();
+
+    for(var i = 0;i<imgArray.length;i++)
+    {
+        if(imgArray[i] == img)
+        {
+            if(i == imgArray.length)
+            {
+                var j = 0;
+                document.getElementById().src = imgArray[j].src;
+                break;
+            }
+            else
+            var j = i + 1;
+           document.getElementById().src = imgArray[j].src;
+            break;
+        }
+    }   
+}
+</script>
+<style>
+#div1 {
+height:400px;
+width:700px;
+
+overflow:hidden;
+}
+#div2 {
+margin:0 auto;
+height:400px;
+width:700px;
+border:10px;
+overflow:hidden;
+}
+
+</style>
+<body>
+<div id="div2"><img id="div1" src="9.jpg"> </div>
+<br><br>
+<CENTER>
+<button id="b1" onclick="function()" value="ZOOM IN +">ZOOM IN
+
++</button>
+<button id="b2" onclick="function()" value="ZOOM OUT-">ZOOM 
+
+OUT-</button>
+
+<button id="b3" onclick="function()" value="ACTUAL SIZE">ACTUAL 
+
+SIZE</button>
+
+<button id="l" onclick="function()" value="LEFT ROTATE">LEFT ROTATE</button>
+<button id="r" onclick="function()" value="RIGHT ROTATE">RIGHT ROTATE</button>
+
+</CENTER>
+</body>
+</html>
